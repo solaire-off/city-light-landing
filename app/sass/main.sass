@@ -14,14 +14,14 @@ html
   font-size: 16px
 
 body
-  font-size: 1rem
+  font-size: 0.875rem
   min-width: 320px
   position: relative
   font-family: "Roboto"
   overflow-x: hidden
   font-weight: 300
   opacity: 1
-  background: #0e0e0e
+  background: $default-background
   color: white
 
 a
@@ -41,6 +41,24 @@ a
 
 .section
   padding-top: 3.875rem
+  .section-title
+    text-align: center
+    margin: 0
+    font-family: 'MullerMedium'
+    font-weight: 400
+    span
+      padding: 1rem 2.7rem
+      line-height: 1
+      display: inline-block
+      text-transform: uppercase
+
+  
+  .section-info
+    text-align: center
+    margin-top: 2.8125rem
+    p
+      &:last-of-type
+        margin-bottom: 0
 
 .h1
   font-size: $h1
@@ -57,7 +75,6 @@ a
   .menu-item
     font-weight: 800
     transition: all 0.3s ease
-    font-size: 0.875rem
     text-transform: uppercase
     padding: 0.75rem 0.5rem 0.5rem
     border: 1px solid transparent
@@ -71,9 +88,9 @@ a
 #block-preview
   height: 100%
   position: relative
-  // background-image: url(../img/preview-default.png), url(../img/preview-orange.png)
-  background-position: center, center
+  // background: url(../img/preview-default.png), url(../img/preview-orange.png)
   background-size: cover, cover
+  background-position: center, center
 
 
   .slide-down
@@ -81,6 +98,9 @@ a
     bottom: 0
     left: 0
     right: 0
+#block-about
+    padding-top: 7.5rem
+
 
 .slide-down
   text-align: center
@@ -100,7 +120,189 @@ a
       background: rgba($accent, 0.7)
 
     
-  
+
+@keyframes UpToDown 
+  0%
+    background-position: 50% 0%
+  50%
+    background-position: 50% 100%
+  100%
+    background-position: 51% 0%
+
+.up-to-down-gradient
+   background: linear-gradient(0deg, #ff2e9d, #ff0000, #f8863d)
+   background-size: 600% 600%;
+   animation: UpToDown 6s ease infinite
+
+
+
+.gradient-border 
+  --borderWidth: 3px
+  position: relative;
+  background: $default-background
+
+.gradient-border:after 
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #ff2e9d, #ff0000, #f8863d);
+  z-index: -1
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 200% 200%;
+
+
+@keyframes animatedgradient 
+	0% 
+		background-position: 0% 50%;
+
+	50% 
+		background-position: 100% 50%;
+
+	100% 
+		background-position: 0% 50%;
+
+.history
+  margin-top: 4.25rem
+
+.title
+  font-size: 1.125rem
+  font-weight: 400
+
+.box
+  padding: 1.875rem 2.8125rem 2.8125rem 1.875rem
+  border: $box-border
+  background: $box-background
+  display: flex
+  .box-icon
+    border: $box-border
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 4.375rem
+    height: 4.375rem
+    font-size: 2rem
+    flex-shrink: 0
+    margin-right: 2rem
+  .box-content
+    p
+      margin-top: 0
+      &:last-of-type
+        margin-bottom: 0
+
+
+
+
+
+.timeline 
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 1.25rem;
+  padding: 1em 0;
+  list-style-type: none;
+  margin-bottom: 6rem
+
+
+.timeline:before 
+  position: absolute;
+  left: 50%;
+  top: 7rem;
+  content: ' ';
+  display: block;
+  width: 4px;
+  height: calc(100% - 2.5rem)
+  margin-left: -3px;
+  background: linear-gradient(0deg, #ff2e9d, #ff0000, #f8863d)
+  background-size: 600% 600%;
+  animation: UpToDown 6s ease infinite
+  z-index: 5;
+
+
+.timeline li 
+  padding: 2rem 0;
+
+.timeline li:after 
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+
+
+.direction-l 
+  position: relative;
+  width: 31.25rem;
+  float: left;
+
+
+.direction-r 
+  position: relative;
+  width: 31.25rem;
+  float: right;
+
+.direction-l:before,
+.direction-r:before 
+  position: absolute;
+  top: 50%;
+  right: -3.75rem
+  content: ' ';
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: -0.625rem;
+  background: rgb(255,80,80);
+  border: 2px solid #fff;
+  z-index: 10;
+
+
+.direction-r:before 
+  left: -3.85rem;
+
+
+/* ================ Timeline Media Queries ================ */
+
+.button
+  font-family: 'MullerMedium';
+  font-weight: 400;
+  font-size: 1.25rem
+  padding: 1rem 2.7rem
+  border: 3px solid #333
+  background: transparent
+  color: white
+  text-transform: uppercase
+  position: relative
+  cursor: pointer
+  &::before,
+  &::after
+      position: absolute;
+      content: "";
+      transition: all .25s;	
+  &::before
+    border-bottom: 2px solid $accent;
+    border-left: 2px solid $accent;
+    width: 10%;
+    height: 33%;
+    left: -2px;
+    bottom: -2px;
+  &::after
+    border-top: 2px solid $accent;
+    border-right: 2px solid $accent;
+    width: 10%;
+    height: 33%;
+    top: -2px;
+    right: -2px;
+  &:hover,
+  &:focus
+    &::before
+      width: 101%;
+      height: 105%;
+    &::after
+      width: 101%;
+      height: 105%;
+
 
 
 @import "media" 

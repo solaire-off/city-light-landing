@@ -4,17 +4,59 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+  html
+    font-size: 14px
 
+  .direction-l:before 
+    right: -2.25rem
 
+  .direction-r:before 
+    left: -2.45rem;
+  
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
 
+  .timeline 
+    width: 45rem
+    display: flex
+    flex-direction: column
+    padding-left: 10rem
+    &::before 
+      left: 6.9rem;
+      top: 10rem
+      height: calc(100% - 8rem)
+
+
+  .direction-l,
+  .direction-r 
+    float: none;
+    width: 100%;
+    text-align: center;
+
+  .direction-l:before,
+  .direction-r:before 
+    position: absolute;
+    left: -3.5rem;
+
+
+  .box
+    align-items: center
+    flex-direction: column
+    .box-icon
+      margin-right: 0
+      margin-bottom: 2rem
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+  .timeline 
+    width: 100%
+    padding-left: 5rem
+    &::before
+      left: 1.9rem
+
+  .direction-l:before,
+  .direction-r:before 
+    top: 7rem
 
 
 /* Extra Small Devices, Phones */
