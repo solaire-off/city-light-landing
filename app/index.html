@@ -40,7 +40,16 @@
         </div>
       </div>
     </section>
-    <section id="block-about" class="section"> 
+    <section 
+      data-aos="fade-up"
+      data-aos-offset="-200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-center"
+      id="block-about" class="section"> 
       <div class="container">
         <h2 class="section-title h1"><span class="gradient-border">О нас</span></h2>
         <div class="section-info">
@@ -52,7 +61,16 @@
           <ul class="timeline">
 
             <!-- Item 1 -->
-            <li>
+            <li
+                data-aos="flip-up"
+                data-aos-offset="-200"
+                data-aos-delay="50"
+                data-aos-duration="500"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-center"
+              >
               <div class="direction-l">
                 <div class="box"> 
                   <div class="box-icon">
@@ -67,7 +85,16 @@
             </li>
 
             <!-- Item 2 -->
-            <li>
+            <li
+                data-aos="flip-up"
+                data-aos-offset="-200"
+                data-aos-delay="50"
+                data-aos-duration="500"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-center"
+              >
               <div class="direction-r">
                 <div class="box"> 
                   <div class="box-icon">
@@ -82,7 +109,16 @@
             </li>
 
             <!-- Item 3 -->
-            <li>
+            <li
+                data-aos="flip-up"
+                data-aos-offset="-200"
+                data-aos-delay="50"
+                data-aos-duration="500"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-center"
+              >
               <div class="direction-l">
                 <div class="box"> 
                   <div class="box-icon">
@@ -97,13 +133,32 @@
             </li>
           </ul>
 
-          <p class="mt-5 text-center">
-          <button class="button">Читать дальше</button>
+          <p class="mt-5 text-center"
+             data-aos="flip-down"
+             data-aos-offset="0"
+             data-aos-delay="50"
+             data-aos-duration="500"
+             data-aos-easing="ease-in-out"
+             data-aos-mirror="true"
+             data-aos-once="false"
+             data-aos-anchor-placement="top-bottom"
+          >
+            <button class="button">Читать дальше</button>
           </p>
         </div>
       </div>
     </section>
-    <section id="block-works" class="section"> 
+    <section id="block-works" class="section"
+      data-aos="fade-up"
+      data-aos-offset="-200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-center"
+      
+      > 
       <div class="container">
         <h2 class="section-title h1"><span class="gradient-border">Проекты</span></h2>
         <div class="section-info">
@@ -111,7 +166,16 @@
           В проектах мы используем статический и динамический свет на основе самых современных энергосберегающих технологий.</p>
         </div>
 
-        <div class="works-slider">
+        <div class="works-slider" 
+            data-aos="fade-up"
+            data-aos-offset="-200"
+            data-aos-delay="50"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="center-bottom"
+          >
           <div class="slide">
             <img class="slide-image" src="img/slider/chelyabinsk.png">
             <div class="slide-info">
@@ -183,6 +247,12 @@
         nextArrow: $(".js-slick-next"),
         prevArrow: $(".js-slick-prev"),
       });
+    </script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script>
+    AOS.init();
     </script>
   </body>
 </html>
