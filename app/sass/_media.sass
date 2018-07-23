@@ -12,6 +12,15 @@
 
   .direction-r:before 
     left: -2.45rem;
+
+  .slide
+    .slide-image
+      height: 33.4375rem
+
+
+
+
+  
   
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
@@ -26,7 +35,6 @@
       top: 10rem
       height: calc(100% - 8rem)
 
-
   .direction-l,
   .direction-r 
     float: none;
@@ -38,6 +46,9 @@
     position: absolute;
     left: -3.5rem;
 
+  .slide
+    .slide-image
+      height: 25rem
 
   .box
     align-items: center
@@ -58,15 +69,26 @@
   .direction-r:before 
     top: 7rem
 
+  .slide
+    .slide-image
+      height: 25rem
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
-
+  .slide
+    .slide-image
+      height: 20rem
+    .slide-info
+      width: 100%
+  .js-slick-next, 
+  .js-slick-prev
+    bottom: 25rem
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	/**/
+  .slide
+    .slide-image
+      height: 15rem
 
 
 /*==========  Mobile First  ==========*/
