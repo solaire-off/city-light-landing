@@ -47,8 +47,8 @@ a
   .section-title
     text-align: center
     margin: 0
-    font-family: 'MullerMedium'
-    font-weight: 400
+    font-family: 'Muller'
+    font-weight: 500
     span
       padding: 1rem 2.7rem
       line-height: 1
@@ -137,6 +137,20 @@ a
       &:hover,
       &:focus
         transform: translateY(-.3rem);
+
+#block-clients
+  .gallery
+    margin-top: 4.625rem
+    .box
+      padding: 2.5rem 0
+#block-fact
+  background: #333
+  padding-top: 5.375rem
+  padding-bottom: 5.125rem
+  margin-top: 4.75rem
+  .section-title
+    .gradient-border
+      background: #333
 
 .slide-down
   text-align: center
@@ -312,11 +326,11 @@ a
     width: 28rem
     margin: 8.5rem auto 0
   .slide-title
-    font-family: 'MullerMedium';
+    font-family: 'Muller';
     font-size: 1.25rem
     text-align: center
     margin-bottom: 2rem
-    font-weight: 400
+    font-weight: 500
 
 .js-slick-next,
 .js-slick-prev
@@ -378,8 +392,8 @@ a
 
 
 .button
-  font-family: 'MullerMedium';
-  font-weight: 400;
+  font-family: 'Muller';
+  font-weight: 500;
   font-size: 1.25rem
   padding: 1rem 2.7rem
   border: 3px solid #333
@@ -425,4 +439,38 @@ a
       width: 0
       border: none
 
+.fact_list
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  
+.fact
+  display: flex
+  margin-top: 4rem
+  .fact-icon
+    font-size: 3.0rem
+    line-height: 1.5
+    // margin-right: 1.8125rem
+    margin-right: 1.115rem
+    &.fa-laptop
+      line-height: 1.2
+    &.fa-coffee
+      line-height: 1.2
+    &.fa-files-o
+      line-height: 1.6
+  .fact-info
+    color: white
+    .number
+      font-family: 'Muller'
+      font-weight: 300
+      font-size: 3.5rem
+      margin: 0
+    .caption
+      font-family: 'MyriadPro'
+      font-weight: 800
+      color: $accent
+      font-size: 1rem
+      margin: 0
+      text-transform: uppercase
+      
 @import "media" 

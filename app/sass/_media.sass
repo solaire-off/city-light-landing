@@ -24,6 +24,11 @@
   
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+  .fact_list
+    justify-content: space-around
+    .fact
+      padding: 0 0rem
+        
 
   .timeline 
     width: 45rem
@@ -75,6 +80,13 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+  .fact_list
+    flex-direction: column
+    align-items: center
+    justify-content: baseline
+    .fact
+      width: 15rem
+    
   .slide
     .slide-image
       height: 20rem

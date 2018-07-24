@@ -170,7 +170,7 @@
             data-aos="fade-up"
             data-aos-offset="-200"
             data-aos-delay="50"
-            data-aos-duration="500"
+            data-aos-duration="750"
             data-aos-easing="ease-in-out"
             data-aos-mirror="true"
             data-aos-once="false"
@@ -255,7 +255,69 @@
         </div>
       </div>
     </section>
+    <section id="block-fact" class="section"
+      data-aos-id="fact"
+      data-aos="fade-up"
+      data-aos-offset="-200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-center"
+      > 
+      <div class="container">
+        <h2 class="section-title h1"><span class="gradient-border">ИНТЕРЕСНЫЕ ФАКТЫ</span></h2>
+        <div class="section-info">
+          <p>Мы формируем уникальный облик зданий за счет современных световых дизайнерских решений, с использованием светодиодного оборудования.<br/>
+          В проектах мы используем статический и динамический свет на основе самых современных энергосберегающих технологий.</p>
+        </div>
+          <div class="fact_list">
+              <div class="fact"
+                   data-aos="fade-up"
+                   data-aos-delay="50"
+                   >
+                <i class="fa fa-users fact-icon" aria-hidden="true"></i>
+                <div class="fact-info">
+                  <p class="number"><span data-to="110" class="js-up-to">110</span></p>
+                  <p class="caption">ПРОФЕССИОНАЛОВ</p>
+                </div>
+              </div>
+              <div class="fact"
+                   data-aos="fade-up"
+                   data-aos-delay="250"
+                   >
+                <i class="fa fa-files-o fact-icon" aria-hidden="true"></i>
+                <div class="fact-info">
+                  <p class="number"><span data-to="1150" class="js-up-to">1150</span></p>
+                  <p class="caption">Уникальных проектов</p>
+                </div>
+              </div>
+              <div class="fact"
+                   data-aos="fade-up"
+                   data-aos-delay="450"
+                   >
+                <i class="fa fa-laptop fact-icon" aria-hidden="true"></i>
+                <div class="fact-info">
+                  <p class="number"><span data-to="30" class="js-up-to">30</span>K</p>
+                  <p class="caption">Рабочих часов</p>
+                </div>
+              </div>
+              <div class="fact"
+                   data-aos="fade-up"
+                   data-aos-delay="650"
+                   >
+                <i class="fa fa-coffee fact-icon" aria-hidden="true"></i>
+                <div class="fact-info">
+                  <p class="number"><span data-to="12.8" class="js-up-to">12.8</span>K</p>
+                  <p class="caption">Выпитых кружок кофе</p>
+                </div>
+              </div>
+          </div>
 
+        
+      </div>
+    </section>
 
 
 
@@ -279,6 +341,39 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
           <script>
     AOS.init();
+    </script>
+
+    <script src="/libs/jquery-animateNumber/jquery.animateNumber.min.js"></script>
+    <script>
+        var first_out = false;
+        var e = document.getElementById('block-fact')
+        var observer = new MutationObserver(function (event) {
+              if (event[0].target.classList.contains('aos-animate')){
+                console.log('win')
+                if (!first_out){
+                    first_out = !first_out;
+                    delay = 1000;
+                    $(".js-up-to").each(function(){
+                      to = $(this).data('to');
+                      $(this).animateNumber(
+                          {
+                            number: to,
+                            easing: 'easeInQuad',
+                          },
+                          delay
+                        );
+                      delay += 300;
+                    });
+                }
+              }
+        });
+
+        observer.observe(e, {
+            attributes: true, 
+            attributeFilter: ['class'],
+            childList: false, 
+            characterData: false
+        })
     </script>
   </body>
 </html>
