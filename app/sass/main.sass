@@ -1,6 +1,6 @@
 @import "fonts"
-@import "libs"
 @import "vars"
+@import "libs"
 
 *
 	box-sizing: border-box
@@ -23,6 +23,10 @@ body
   opacity: 1
   background: $default-background
   color: white
+  input,textarea
+    font-family: "Roboto"
+    font-weight: 300
+    
 
 a
   text-decoration: none
@@ -49,7 +53,8 @@ a
     margin: 0
     font-family: 'Muller'
     font-weight: 500
-    span
+    span,
+    a
       padding: 1rem 2.7rem
       line-height: 1
       display: inline-block
@@ -102,6 +107,10 @@ a
     left: 0
     right: 0
 
+#block-download
+  .section-title
+    a
+      display: inline-block
 #block-about
   padding-top: 7.5rem
 
@@ -132,11 +141,6 @@ a
         &:last-of-type
           margin-bottom: 2.75rem
     padding-bottom: 1rem
-    .button
-      transition: transform 0.3s ease-in-out
-      &:hover,
-      &:focus
-        transform: translateY(-.3rem);
 
 #block-clients
   .gallery
@@ -151,7 +155,20 @@ a
   .section-title
     .gradient-border
       background: #333
+  + .section
+    &::before
+      content: none
 
+#block-form
+  form
+    margin-top: 4.5rem
+    textarea
+      margin-top: 0.7rem
+    button
+      font-size: 0.875rem
+      margin-top: 1rem
+      padding: .8rem 3rem
+      
 .slide-down
   text-align: center
   .slide-down-title
@@ -438,6 +455,12 @@ a
       height: 0
       width: 0
       border: none
+
+.with-hover-up
+  transition: transform 0.3s ease-in-out
+  &:hover,
+  &:focus
+    transform: translateY(-.3rem);
 
 .fact_list
   display: flex

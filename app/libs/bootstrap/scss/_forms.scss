@@ -14,6 +14,7 @@
   background-color: $input-bg;
   background-clip: padding-box;
   border: $input-border-width solid $input-border-color;
+  box-shadow: none !important;
 
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
   @if $enable-rounded {
@@ -24,7 +25,7 @@
     border-radius: 0;
   }
 
-  @include box-shadow($input-box-shadow);
+  // @include box-shadow($input-box-shadow);
   @include transition($input-transition);
 
   // Unstyle the caret on `<select>`s in IE10+.
@@ -41,6 +42,7 @@
     color: $input-placeholder-color;
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
     opacity: 1;
+    text-transform: uppercase;
   }
 
   // Disabled and read-only inputs
@@ -248,8 +250,8 @@ select.form-control-lg {
 // pseudo-classes but also includes `.is-invalid` and `.is-valid` classes for
 // server side validation.
 
-@include form-validation-state("valid", $form-feedback-valid-color);
-@include form-validation-state("invalid", $form-feedback-invalid-color);
+// @include form-validation-state("valid", $form-feedback-valid-color);
+// @include form-validation-state("invalid", $form-feedback-invalid-color);
 
 // Inline forms
 //

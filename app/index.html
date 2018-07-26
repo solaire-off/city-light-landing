@@ -247,7 +247,7 @@
                 <div class="box-info text-center w-100">
                   <p class="title pb-4">ЗАГРУЗИ ПРЕДЛОЖЕНИЕ КОНКУРЕНТА<br/>
                   И МЫ ПРЕДЛОЖИМ ЛУЧШУЮ ЦЕНУ.</p>
-                  <p class="text-center"><button class="button is-accent">ОТПРАВИТЬ ЗАЯВКУ</button></p>
+                  <p class="text-center"><button class="button is-accent with-hover-up">ОТПРАВИТЬ ЗАЯВКУ</button></p>
                   <img src="img/mouse.png">
                 </div>
               </div>
@@ -318,7 +318,66 @@
         
       </div>
     </section>
+    <section 
+      data-aos="fade-up"
+      data-aos-offset="-200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-center"
+      id="block-form" class="section"> 
+      <div class="container">
+        <h2 class="section-title h1"><span class="gradient-border">Обратная связь</span></h2>
+        <div class="section-info">
+          <p>Мы формируем уникальный облик зданий за счет современных световых дизайнерских решений, с использованием светодиодного оборудования.<br/>
+          В проектах мы используем статический и динамический свет на основе самых современных энергосберегающих технологий.</p>
+        </div>
 
+        <form action="#" method="POST" class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <input type="text" class="form-control" id="id_name"  placeholder="Ваше имя">
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <input type="email" class="form-control" id="id_email" placeholder="Ваш email">
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <input type="text" class="form-control" id="id_phone"  placeholder="Ваш телефон">
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group">
+              <textarea class="form-control" id="content" name="content" rows="6" placeholder="Ваше сообщение"></textarea>
+            </div>
+            <p class="text-center"><button class="button is-accent with-hover-up">Отправить сообщение</button></p>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section 
+      data-aos="fade-up"
+      data-aos-offset="-200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-center"
+      id="block-form" class="section"> 
+      <div class="container">
+      <h2 class="section-title h1"><span class="with-hover-up"><a href="#" class="gradient-border">Скачать презентацию</a></span></h2>
+        <div class="section-info">
+          <p>Скачайте презентацию чтобы получить более детальное представление о компании и о наших проектах.</br>
+          Скачайте презентацию чтобы получить более детальное представление о компании и о наших проектах.</p>
+        </div>
+      </div>
+    </section>
 
 
 
@@ -349,7 +408,6 @@
         var e = document.getElementById('block-fact')
         var observer = new MutationObserver(function (event) {
               if (event[0].target.classList.contains('aos-animate')){
-                console.log('win')
                 if (!first_out){
                     first_out = !first_out;
                     delay = 1000;
