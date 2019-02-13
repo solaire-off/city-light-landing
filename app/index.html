@@ -23,20 +23,22 @@
       <div class="container h-100">
         <header class="header">
           <img class="header-logo" src="img/ct-logo.png">
+          <input class="burger-menu" id="toggle_menu" type="checkbox">
           <nav class="menu">
-            <a class="menu-item" href="">Главная</a>
-            <a class="menu-item" href="">О нас</a>
-            <a class="menu-item" href="">Освещение</a>
-            <a class="menu-item" href="">Проекты</a>
-            <a class="menu-item" href="">Преимущества</a>
-            <a class="menu-item" href="">Партнеры</a>
-            <a class="menu-item" href="">Контакты</a>
+            <a class="menu-item" href="#">Главная</a>
+            <a class="menu-item" href="#block-about">О нас</a>
+            <a class="menu-item" href="#block-works">Проекты</a>
+            <a class="menu-item" href="#block-clients">Клиенты</a>
+            <a class="menu-item" href="#block-fact">Факты</a>
+            <a class="menu-item" href="#block-form">Обратная связь</a>
+            <a class="menu-item" href="#block-contact">Контакты</a>
           </nav>
+          <label for="toggle_menu"  class="burger"></label>
         </header>
         <div class="slide-down">
           <h1 class="slide-down-title h1">АРХИТЕКТУРНО-ХУДОЖЕСТВЕННОЕ<br/>
             ОСВЕЩЕНИЕ ЗДАНИЙ</h1>
-          <a class="slide-down-action" href="#"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+          <a class="slide-down-action scrollTo" href="#block-about"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
@@ -143,7 +145,7 @@
              data-aos-once="false"
              data-aos-anchor-placement="top-bottom"
           >
-            <button class="button">Читать дальше</button>
+          <a href="#block-works" class="button scrollTo">Читать дальше</a>
           </p>
         </div>
       </div>
@@ -247,7 +249,7 @@
                 <div class="box-info text-center w-100">
                   <p class="title pb-4">ЗАГРУЗИ ПРЕДЛОЖЕНИЕ КОНКУРЕНТА<br/>
                   И МЫ ПРЕДЛОЖИМ ЛУЧШУЮ ЦЕНУ.</p>
-                  <p class="text-center"><button class="button is-accent with-hover-up">ОТПРАВИТЬ ЗАЯВКУ</button></p>
+                  <p class="text-center"><a href="#block-form" class="button scrollTo is-accent with-hover-up">ОТПРАВИТЬ ЗАЯВКУ</a></p>
                   <img src="img/mouse.png">
                 </div>
               </div>
@@ -328,18 +330,18 @@
               <img src="img/gallery/15.png">
             </div>
         </div>
-        <p class="mt-5 text-center"
-                     data-aos="flip-down"
-                     data-aos-offset="0"
-                     data-aos-delay="50"
-                     data-aos-duration="500"
-                     data-aos-easing="ease-in-out"
-                     data-aos-mirror="true"
-                     data-aos-once="false"
-                     data-aos-anchor-placement="top-bottom"
-                     >
-                     <button class="button is-gray">Развернуть</button>
-        </p>
+        <!-- <p class="mt-5 text-center" -->
+        <!--              data-aos="flip-down" -->
+        <!--              data-aos-offset="0" -->
+        <!--              data-aos-delay="50" -->
+        <!--              data-aos-duration="500" -->
+        <!--              data-aos-easing="ease-in-out" -->
+        <!--              data-aos-mirror="true" -->
+        <!--              data-aos-once="false" -->
+        <!--              data-aos-anchor-placement="top-bottom" -->
+        <!--              > -->
+        <!--              <button class="button is-gray">Развернуть</button> -->
+        <!-- </p> -->
       </div>
 
     </section>
@@ -488,11 +490,13 @@
             <div class="col-md-5 offset-md-1">
               <p>
               <img class="icon" src="img/icons/call.png"> 
-              +7 (499) 372-18-02
+              <a href="tel:+74993721802">
+                +7 (499) 372-18-02
+              </a>
               </p>
               <p>
               <img class="icon" src="img/icons/mail.png"> 
-              sales@ct-light.ru
+              <a href="mailto:sales@ct-light.ru"> sales@ct-light.ru </a>
               </p>
               <p>
               <img class="icon" src="img/icons/home.png"> 
@@ -508,30 +512,30 @@
                   </a>
                   </p>
                   <p>
-                  <a href="#" class="text-gray">
+                  <a href="#block-about" class="text-gray">
                     О НАС
                   </a>
                   </p>
                   <p>
-                  <a href="#" class="text-gray">
-                    КАТАЛОГ
+                  <a href="#block-works" class="text-gray">
+                    ПРОЕКТЫ
                   </a>
                   </p>
                 </div>
                 <div class="col-4">
                   <p>
-                  <a href="#" class="text-gray">
-                    ПРОЕКТЫ
+                  <a href="#block-clients" class="text-gray">
+                    КЛИЕНТЫ
                   </a>
                   </p>
                   <p>
-                  <a href="#" class="text-gray">
-                    ПАРТНЕРЫ
+                  <a href="#block-fact" class="text-gray">
+                    ФАКТЫ
                   </a>
                   </p>
                   <p>
-                  <a href="#" class="text-gray">
-                    ОТЗЫВЫ
+                  <a href="#block-form" class="text-gray">
+                    ОБРАТНАЯ СВЯЗЬ
                   </a>
                   </p>
                 </div>

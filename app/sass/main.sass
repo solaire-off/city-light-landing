@@ -82,6 +82,59 @@ a
   .header-logo
     width: 8.5625rem
     height: auto
+    flex-shrink: 0
+
+$burger-width: 2.8rem
+$burger-line-height: 0.2em
+$burger-line-margin: 0.4rem
+$burger-color: white
+.burger 
+  flex-shrink: 0
+  cursor: pointer
+  position: relative;
+  background: rgba($burger-color, 1);
+  width: 100%;
+  height: $burger-line-height;
+  opacity: 1;
+  width: $burger-width
+  transition: all 0.3s ease-in-out
+  display: none
+
+  &::before 
+    position: absolute;
+    background: rgba($burger-color,1);
+    width: $burger-width;
+    height: $burger-line-height;
+    top: $burger-line-margin*2;
+    content: "";
+    display: block;
+
+  &::after 
+    position: absolute;
+    background: rgba($burger-color,1);
+    width: $burger-width;
+    height: $burger-line-height;
+    bottom: $burger-line-margin*2;
+    content: "";
+    display: block;
+
+  &::after,
+  &::before
+    transition: all .3s ease-in-out;
+
+.burger-menu
+  display: none
+  &:checked
+    ~ .burger
+      background: rgba($burger-color,.0);
+      &::after
+       transform: rotate(-45deg);
+       bottom: 0px;
+      &::before
+       transform: rotate(45deg);
+       top: 0px;
+      
+
 
 .menu
   .menu-item
@@ -341,7 +394,7 @@ a
   margin-top: 1.25rem;
   padding: 1em 0;
   list-style-type: none;
-  margin-bottom: 6rem
+  margin-bottom: 8rem
 
 
 .timeline:before 

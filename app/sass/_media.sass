@@ -42,7 +42,37 @@
     justify-content: space-around
     .fact
       padding: 0 0rem
+
+  .header
+    .menu
+      opacity: 0
+      z-index: -1
+      transition: opacity 0.3s  
+      top: 0
+      left: 0
+      position: absolute
+      width: 100vw
+      height: 100vh
+      display: flex
+      flex-direction: column
+      align-items: center
+      font-size: 2rem
+      background: #000
+      background: rgba(#000, 0.7)
+      .menu-item
+        &:first-of-type
+          margin-top: 3rem
+  .burger
+    display: block
+    z-index: 101
         
+  .burger-menu
+    display: none
+    &:checked
+      ~ .menu
+        z-index: 1
+        opacity: 1
+
 
   .timeline 
     width: 45rem
@@ -124,6 +154,12 @@
   .js-slick-next, 
   .js-slick-prev
     margin-top: -25rem
+
+  .header
+    .menu
+      .menu-item
+        &:first-of-type
+          margin-top: 7rem
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

@@ -14,8 +14,8 @@ $(function() {
             duration: 5500,
   });
 
-  $( window ).resize(function() {
 
+  function ChangeAnimation(){
     if ($( window ).width() < 900){
         $("#block-preview").bgswitcher({
           effect: 'fade',
@@ -26,7 +26,31 @@ $(function() {
           effect: 'clip',
         })
     }
+  }
+  $( window ).resize(function() {
+
+    ChangeAnimation();
+
   });
 
+  ChangeAnimation();
+
+
+
+  $('.scrollTo, #block-contact .menu a').smoothScroll({
+      speed: 1000
+      });
+
+  $('.header .menu a').smoothScroll({
+      offset: -100,
+      speed: 1000
+      });
+
+
+  $('.header .menu a').click(function(){
+    if ($('.burger-menu').is(':checked')) {
+      $('.burger-menu').prop('checked', false)
+    }
+  });
 
 });

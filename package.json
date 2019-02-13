@@ -20,6 +20,7 @@
     "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
-    "gulp-purgecss": "^1.0.0"
+    "gulp-purgecss": "^1.0.0",
+    "jquery-smooth-scroll": "^2.2.0"
   }
 }
